@@ -1,0 +1,131 @@
+.stack {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto; /* Align to center horizontally*/
+  width: 300px;
+  height: 300px;
+  padding: 0;
+  list-style: none;
+}
+.stack .stack-item {
+  /* transition: all 100ms ease-in-out; */
+  position: absolute;
+  list-style: none;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  overflow: visible; /* future: check this if overflows into bottom div*/
+  height: 100%; /* This will set the height same as it's parent + any additional paddings and margins*/
+}
+.stack .stack-item:nth-child(1) {
+  top: 72px;
+  z-index: 999;
+  width: 100%;
+}
+.stack .stack-item:nth-child(2) {
+  top: 60px;
+  z-index: 998;
+  width: 90%;
+}
+.stack .stack-item:nth-child(3) {
+  top: 48px;
+  z-index: 997;
+  width: 80%;
+}
+.stack .stack-item:nth-child(4) {
+  top: 36px;
+  z-index: 996;
+  width: 70%;
+}
+.stack .stack-item:nth-child(5) {
+  top: 24px;
+  z-index: 995;
+  width: 60%;
+}
+/* 
+.transformThis {
+  animation: scaleDown 500ms;
+}
+.transformPrev {
+  animation: scaleUp 100ms;
+  display: none;
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(1.2) translateY(50px);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(1.15) translateY(40px);
+    opacity: 0.1;
+  }
+  40% {
+    transform: scale(1.1) translateY(30px);
+    opacity: 0.2;
+  }
+  60% {
+    transform: scale(1.05) translateY(20px);
+    opacity: 0.4;
+  }
+  80% {
+    transform: scale(1.01) translateY(10px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes scaleDown {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(1.01) translateY(20px);
+    opacity: 0.8;
+  }
+  40% {
+    transform: scale(1.05) translateY(40px);
+    opacity: 0.4;
+  }
+  60% {
+    transform: scale(1.1) translateY(60px);
+    opacity: 0.2;
+  }
+  80% {
+    transform: scale(1.15) translateY(80px);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(1.2) translateY(100px);
+    opacity: 0;
+  }
+}
+@keyframes scaleCard {
+  0% {
+    top: 5px;
+  }
+  100% {
+    top: 24px;
+  }
+}
+@keyframes bounceInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+} */
