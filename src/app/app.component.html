@@ -1,40 +1,26 @@
 <div>
 	<p>
-		<br/> Gesture = {{gesture}}
+		Gesture = swipedown
 	</p>
 </div>
 
-<!-- <div class="row justify-content-center stack">
-	<div class="stack-list">
-		<div class="card stack-item" style="width: 18rem;" *ngFor="let item of items; let idx=index" [class.visible]="item.visible" [class.hidden]="!item.visible"
-		 (swipeleft)="swipe(idx, $event.type)" (swiperight)="swipe(idx, $event.type)" (swipedown)="swipe(idx, $event.type)" (swipeup)="swipe(idx, $event.type)"
-		 (pinch)="swipe(idx, $event.type)">
-			<img class="card-img-top" [src]="item.image" alt="Card image cap" draggable="false">
-			<div class="card-body">
-				<h5 class="card-title">{{item.name}}</h5>
-				<p class="card-text">Some description about {{item.name}}</p>
-				<a href="#" class="btn btn-primary">Do something</a>
+<div class="row justify-content-center">
+	<div class="col-sm-6">
+		<div class="stack">
+			<div class="stack-item" *ngFor="let item of cardItems; let idx=index">
+				<div class="card" 
+         [@cardAnimator]="item.animationState" 
+         (@cardAnimator.done)="resetAnimationState(item)" 
+         (swipedown)="swipe(item, $event.type)"
+        >
+					<img class="card-img-top" [src]="item.image" alt="Card image cap" draggable="false">
+					<div class="card-body">
+						<h5 class="card-title">{{item.name}}</h5>
+						<p class="card-text">Some description about {{item.name}}</p>
+						<a href="#" class="btn btn-primary">Do something</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div> -->
-
-<div class="row justify-content-center">
-  <div class="col-sm-6">
-    <div class="stack">
-      <div class="stack-item" *ngFor="let item of items; let idx=index">
-          <div class="card"
-          (swipeleft)="swipe(idx, $event.type)" 
-          (swiperight)="swipe(idx, $event.type)" (swipedown)="swipe(idx, $event.type)" (swipeup)="swipe(idx, $event.type)"
-          (pinch)="swipe(idx, $event.type)">
-            <img class="card-img-top" [src]="item.image" alt="Card image cap" draggable="false">
-            <div class="card-body">
-              <h5 class="card-title">{{item.name}}</h5>
-              <p class="card-text">Some description about {{item.name}}</p>
-              <a href="#" class="btn btn-primary">Do something</a>
-            </div>
-          </div>
-      </div>
-  </div>	
-</div>
 </div>

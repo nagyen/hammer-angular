@@ -9,7 +9,7 @@
   list-style: none;
 }
 .stack .stack-item {
-  /* transition: all 100ms ease-in-out; */
+  transition: all 100ms ease-in-out;
   position: absolute;
   list-style: none;
   left: 0;
